@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TextInfo</string>
+    <string name="app_text">我这个是参数（%1$s）,这个也是（%2$s）</string>
+    <string name="baoxiang">您今天打了%1$d局,还差%2$d局可获得%3$s!</string>
+</resources>
