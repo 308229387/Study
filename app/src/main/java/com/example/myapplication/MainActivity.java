@@ -1,34 +1,90 @@
 package com.example.myapplication;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
-import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.BackgroundColorSpan;
-import android.text.style.ForegroundColorSpan;
-import android.widget.TextView;
-
 public class MainActivity extends AppCompatActivity {
+    private String data[] = {"aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ListView listView = (ListView) findViewById(R.id.mListView);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        AdapterView.OnItemClickListener onClickListener = new onClickListener();
+        listView.setAdapter(adapter);
 
-        TextView textView = (TextView)findViewById(R.id.text);
-
-        String text = String.format(getResources().getString(R.string.baoxiang), 2,18,"银宝箱");
-        int index[] = new int[3];
-        index[0] = text.indexOf("2");
-        index[1] = text.indexOf("18");
-        index[2] = text.indexOf("银宝箱");
-
-        SpannableStringBuilder style=new SpannableStringBuilder(text);
-        style.setSpan(new ForegroundColorSpan(Color.RED),index[0],index[0]+1, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);//ContextCompat.getColor(getActivity(), R.color.main_theme_color)
-        style.setSpan(new ForegroundColorSpan(Color.RED),index[1],index[1]+2,Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-        style.setSpan(new BackgroundColorSpan(Color.RED),index[2],index[2]+3,Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-        textView.setText(style);
+        listView.setOnItemClickListener(onClickListener);
     }
+
+    private class onClickListener implements AdapterView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+
+            goActivity(i);
+
+
+            switch (i) {
+                case 0:
+
+                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                    break;//当我们点击某一项就能吐司我们点了哪一项
+
+                case 1:
+                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case 2:
+                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case 3:
+                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case 4:
+                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+
+        }
+    }
+
+    private void goActivity(int i) {
+        switch (i) {
+            case 0:
+                intent = new Intent(this, TextActivity.class);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                break;//当我们点击某一项就能吐司我们点了哪一项
+
+            case 1:
+                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                break;
+
+            case 2:
+                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                break;
+
+            case 3:
+                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                break;
+
+            case 4:
+                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+    }
+
+
 }
