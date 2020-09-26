@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <View
+            android:id="@+id/item_list_setting_blank"
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"/>
+
+    <View
+            android:id="@+id/item_list_up"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#e7e7e7"/>
+
+    <LinearLayout
+            android:id="@+id/content_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/item_list_setting_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="用户信息"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:layout_weight="1"/>
+            <TextView
+                    android:id="@+id/item_list_setting_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="200M"
+                    android:layout_marginRight="2dp"
+                    android:textColor="#000"
+                    android:textSize="14sp"/>
+
+            <ImageView
+                    android:id="@+id/item_list_setting_tip"
+                    android:src="@drawable/ic_unread_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_list_arraw" />
+
+        </LinearLayout>
+
+        <View
+                android:id="@+id/item_list_shortBottom"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:background="#e7e7e7"/>
+
+        <View
+                android:id="@+id/item_list_longBottom"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#e7e7e7"/>
+
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/item_list_loginout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sel_btn_loginout"/>
+</LinearLayout>
