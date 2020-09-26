@@ -1,4 +1,4 @@
-package com.example.studylist;
+package bean;
 
 public class Setting {
 	private boolean needBlank;

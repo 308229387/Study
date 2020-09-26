@@ -53,7 +53,7 @@
 
             <ImageView
                     android:id="@+id/item_list_setting_tip"
-                    android:src="@drawable/ic_unread_tip"
+                    android:src="@mipmap/ic_unread_tip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:src="@drawable/ic_list_arraw" />
+                android:src="@mipmap/ic_list_arraw" />
 
         </LinearLayout>
 

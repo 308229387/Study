@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     Intent intent;
-    private String[] data = {"文字上色", "Listview", "startActivityForResult", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
+    private String[] data = {"文字上色", "Listview", "startActivityForResult", "ListOne", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case 3:
-                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, ListOneActivity.class);
+                startActivity(intent);
                 break;
 
             case 4:

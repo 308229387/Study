@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.myapplication">
+    package="com.example.activity">
 
     <application
         android:allowBackup="true"
@@ -32,6 +32,11 @@
         <activity
             android:name=".ResultActivity"
             tools:ignore="MissingClass"></activity>
+
+        <activity
+            android:name=".ListOneActivity"
+            tools:ignore="MissingClass"></activity>
+
     </application>
 
 </manifest>
