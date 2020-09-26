@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private String data[] = {"aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
     Intent intent;
+    private String[] data = {"文字上色", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,25 +26,16 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(onClickListener);
     }
 
-    private class onClickListener implements AdapterView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-
-            goActivity(i);
-
-        }
-    }
-
     private void goActivity(int i) {
         switch (i) {
             case 0:
                 intent = new Intent(this, TextActivity.class);
                 startActivity(intent);
-                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
-                break;//当我们点击某一项就能吐司我们点了哪一项
+                break;
 
             case 1:
-                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, ListViewActivity.class);
+                startActivity(intent);
                 break;
 
             case 2:
@@ -60,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
+    }
+
+    private class onClickListener implements AdapterView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+            goActivity(i);
+        }
     }
 
 
