@@ -17,10 +17,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TextActivity"
-        tools:ignore="MissingClass"></activity>
+        <activity
+            android:name=".TextActivity"
+            tools:ignore="MissingClass"></activity>
 
-        <activity android:name=".ListViewActivity"
+        <activity
+            android:name=".ListViewActivity"
+            tools:ignore="MissingClass"></activity>
+
+        <activity
+            android:name=".StartResultActivity"
+            tools:ignore="MissingClass"></activity>
+
+        <activity
+            android:name=".ResultActivity"
             tools:ignore="MissingClass"></activity>
     </application>
 

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     Intent intent;
-    private String[] data = {"文字上色", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
+    private String[] data = {"文字上色", "Listview", "startActivityForResult", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case 2:
-                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, StartResultActivity.class);
+                startActivity(intent);
                 break;
 
             case 3:

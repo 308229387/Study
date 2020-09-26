@@ -1,34 +1,67 @@
 package com.example.myapplication;
 
 import android.app.Activity;
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.BackgroundColorSpan;
-import android.text.style.ForegroundColorSpan;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
 public class StartResultActivity extends Activity {
+    private TextView text;
+    private Button buttonA;
+    private Button buttonB;
+    private Intent mIntent;
+    private int requestCode;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.text_layout);
+        setContentView(R.layout.star_result_layout);
 
-                TextView textView = (TextView)findViewById(R.id.text);
+        text = (TextView) findViewById(R.id.text);
+        buttonA = (Button) findViewById(R.id.button_a);
+        buttonB = (Button) findViewById(R.id.button_b);
 
-        String text = String.format(getResources().getString(R.string.baoxiang), 2,18,"银宝箱");
-        int index[] = new int[3];
-        index[0] = text.indexOf("2");
-        index[1] = text.indexOf("18");
-        index[2] = text.indexOf("银宝箱");
+        buttonA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIntent = new Intent();
+                mIntent.setClass(StartResultActivity.this, ResultActivity.class);
+                requestCode = 1;
+                startActivityForResult(mIntent, requestCode);
+            }
+        });
 
-        SpannableStringBuilder style=new SpannableStringBuilder(text);
-        style.setSpan(new ForegroundColorSpan(Color.RED),index[0],index[0]+1, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);//ContextCompat.getColor(getActivity(), R.color.main_theme_color)
-        style.setSpan(new ForegroundColorSpan(Color.RED),index[1],index[1]+2,Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-        style.setSpan(new BackgroundColorSpan(Color.RED),index[2],index[2]+3, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-        textView.setText(style);
+        buttonB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIntent = new Intent();
+                mIntent.setClass(StartResultActivity.this, ResultActivity.class);
+                requestCode = 2;
+                startActivityForResult(mIntent, requestCode);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        String changeA = data.getStringExtra("changeA");
+        String changeB = data.getStringExtra("changeB");
+
+        switch (requestCode) {
+            case 1:
+                text.setText(changeA);
+                text.setTextColor(getResources().getColor(R.color.water));
+                break;
+            case 2:
+                text.setText(changeB);
+                text.setTextColor(getResources().getColor(R.color.fire));
+                break;
+            default:
+                break;
+        }
     }
 }
