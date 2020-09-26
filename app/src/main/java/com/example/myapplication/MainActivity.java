@@ -32,30 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
             goActivity(i);
 
-
-            switch (i) {
-                case 0:
-
-                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
-                    break;//当我们点击某一项就能吐司我们点了哪一项
-
-                case 1:
-                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
-                    break;
-
-                case 2:
-                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
-                    break;
-
-                case 3:
-                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
-                    break;
-
-                case 4:
-                    Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
-                    break;
-            }
-
         }
     }
 
