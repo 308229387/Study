@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -49,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case 4:
-                Toast.makeText(MainActivity.this, "你点击了" + i + "按钮", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, FragmentForActivity.class);
+                startActivity(intent);
                 break;
         }
 
