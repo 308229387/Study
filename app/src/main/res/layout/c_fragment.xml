@@ -9,13 +9,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/c_fragment_text"
         android:layout_gravity="center_horizontal"
-        android:text="this is Fragment"
+        android:text="this is 3Fragment文字显示区"
         android:textSize="10sp" />
 
     <Button
         android:id="@+id/c_fragment_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点我变字" />
+        android:text="3fragmeng点我变字" />
+
+    <Button
+        android:id="@+id/send_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3fragment向Activity发消息" />
 
 </LinearLayout>
