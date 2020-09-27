@@ -7,7 +7,7 @@
         android:id="@+id/show_fragment_layout"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:background="#000000" />
+        android:background="#00FF00" />
 
 
     <Button
@@ -28,5 +28,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:text="fragment2" />
+
+    <Button
+        android:id="@+id/show_fragment3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_fragment_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="fragment3" />
 
 </RelativeLayout>
