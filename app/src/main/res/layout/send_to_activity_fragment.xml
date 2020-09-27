@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/right_text"
+    <Button
+        android:id="@+id/send_to_activity_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
-        android:text="this is Fragment"
+        android:layout_marginTop="10dp"
+        android:text="我是Fragment,点我发送信息给Activity"
         android:textSize="20sp" />
 
 

@@ -18,10 +18,5 @@
         android:layout_height="wrap_content"
         android:text="3fragmeng点我变字" />
 
-    <Button
-        android:id="@+id/send_activity_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3fragment向Activity发消息" />
 
 </LinearLayout>
