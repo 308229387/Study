@@ -23,6 +23,12 @@ public class DynamicFragmentActivity extends FragmentActivity {
     private Button fragment1Button;
     private Button fragment2Button;
     private Button fragment3Button;
+    private Button sendMessageButton;
+    private int i;
+    private Fragment aFragment;
+    private Fragment bFragment;
+    private Fragment cFragment;
+    private Bundle bundle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,10 +37,13 @@ public class DynamicFragmentActivity extends FragmentActivity {
         fragment1Button = findViewById(R.id.show_fragment1);
         fragment2Button = findViewById(R.id.show_fragment2);
         fragment3Button = findViewById(R.id.show_fragment3);
+        sendMessageButton = findViewById(R.id.send_message_button);
 
-        final Fragment aFragment = new AFragment();
-        final Fragment bFragment = new BFragment();
-        final Fragment cFragment = new CFragment();
+        aFragment = new AFragment();
+        bFragment = new BFragment();
+        cFragment = new CFragment();
+
+        bundle = new Bundle();
 
         fragment1Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,12 +51,14 @@ public class DynamicFragmentActivity extends FragmentActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.show_fragment_layout, aFragment).commit();
             }
         });
+
         fragment2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.show_fragment_layout, bFragment).commit();
             }
         });
+
         fragment3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,5 +66,18 @@ public class DynamicFragmentActivity extends FragmentActivity {
             }
         });
 
+        sendMessageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendMessage();
+            }
+        });
+
+
+    }
+
+    private void sendMessage() {
+        bundle.putString("data", "我是初始化时传的值");
+        cFragment.setArguments(bundle);
     }
 }

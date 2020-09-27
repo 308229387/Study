@@ -25,6 +25,9 @@ public class CFragment extends Fragment {
         cText = view.findViewById(R.id.c_fragment_text);
         cButton = view.findViewById(R.id.c_fragment_button);
         cButton.setOnClickListener(new ButtonClick());
+        if (null != getArguments()) {
+            cText.setText(getArguments().getString("data"));
+        }
         return view;
     }
 
@@ -36,4 +39,6 @@ public class CFragment extends Fragment {
             i++;
         }
     }
+
+
 }
