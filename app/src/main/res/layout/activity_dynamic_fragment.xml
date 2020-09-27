@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativieLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</RelativieLayout>
+    <RelativeLayout
+        android:id="@+id/show_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#000000" />
+
+
+    <Button
+        android:id="@+id/show_fragment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_fragment_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="fragment1" />
+
+    <Button
+        android:id="@+id/show_fragment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_fragment_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="fragment2" />
+
+</RelativeLayout>

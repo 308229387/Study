@@ -41,6 +41,9 @@
             android:name=".FragmentForActivity"
             tools:ignore="MissingClass"></activity>
 
+        <activity
+            android:name=".DynamicFragmentActivity"
+            tools:ignore="MissingClass"></activity>
 
     </application>
 

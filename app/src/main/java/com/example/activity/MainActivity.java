@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     Intent intent;
-    private String[] data = {"文字上色", "Listview", "startActivityForResult", "ListOne", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
+    private String[] data = {"文字上色", "Listview", "startActivityForResult", "ListOne", "静态加载Fragment", "动态加载fragment", "cc", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
             case 4:
                 intent = new Intent(this, FragmentForActivity.class);
+                startActivity(intent);
+                break;
+
+            case 5:
+                intent = new Intent(this, DynamicFragmentActivity.class);
                 startActivity(intent);
                 break;
         }
