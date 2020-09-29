@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     Intent intent;
-    private String[] data = {"文字上色", "Listview", "startActivityForResult", "ListOne", "静态加载Fragment", "动态加载fragment", "fragment向Activity传输信息", "dd", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
+    private String[] data = {"文字上色", "Listview", "startActivityForResult", "ListOne", "静态加载Fragment", "动态加载fragment", "fragment向Activity传输信息", "SharePreference", "aa", "bb", "cc", "dd", "aa", "bb", "cc", "dd"};//假数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
             case 6:
                 intent = new Intent(this, SendMsgToActivity.class);
+                startActivity(intent);
+                break;
+
+            case 7:
+                intent = new Intent(this, SharePreferenceActivity.class);
                 startActivity(intent);
                 break;
         }
