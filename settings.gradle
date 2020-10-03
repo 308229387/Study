@@ -1,2 +1,4 @@
+include ':java'
+include ':java1lib'
 include ':app'
 rootProject.name = "My Application"
