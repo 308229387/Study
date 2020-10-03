@@ -53,6 +53,12 @@
             android:name=".SharePreferenceActivity"
             tools:ignore="MissingClass"></activity>
 
+        <activity
+            android:name=".ServiceActivity"
+            tools:ignore="MissingClass"></activity>
+
+        <service android:name="service.NormalService"></service>
+
     </application>
 
 </manifest>
