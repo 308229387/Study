@@ -1,7 +1,13 @@
 package com.learn.java;
 
-public class ReverseListClass {
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ReverseListClass implements Lock{
     public static void main(String[] arg) {
+        Lock lock = new ReentrantLock();
 
         ListNode temp1 = new ListNode(1);
         ListNode temp2 = new ListNode(2);
@@ -42,6 +48,36 @@ public class ReverseListClass {
         head.next = null;
         return p;
 
+    }
+
+    @Override
+    public void lock() {
+
+    }
+
+    @Override
+    public void lockInterruptibly() throws InterruptedException {
+
+    }
+
+    @Override
+    public boolean tryLock() {
+        return false;
+    }
+
+    @Override
+    public boolean tryLock(long l, TimeUnit timeUnit) throws InterruptedException {
+        return false;
+    }
+
+    @Override
+    public void unlock() {
+
+    }
+
+    @Override
+    public Condition newCondition() {
+        return null;
     }
 
     public static class ListNode {
