@@ -9,9 +9,8 @@ public class RetrofitActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.service_layout);
+        setContentView(R.layout.retrofit_layout);
 
-        
 
     }
 }

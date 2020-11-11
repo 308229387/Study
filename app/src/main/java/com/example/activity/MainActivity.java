@@ -76,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, ThreadActivity.class);
                 startActivity(intent);
                 break;
+
+            case 14:
+                intent = new Intent(this, RetrofitActivity.class);
+                startActivity(intent);
+                break;
         }
 
     }
