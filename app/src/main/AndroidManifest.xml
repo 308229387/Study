@@ -60,6 +60,9 @@
         <activity
             android:name=".ThreadActivity"
             tools:ignore="MissingClass"></activity>
+        <activity
+            android:name=".RetrofitActivity"
+            tools:ignore="MissingClass"></activity>
 
         <service android:name="service.NormalService"></service>
 
